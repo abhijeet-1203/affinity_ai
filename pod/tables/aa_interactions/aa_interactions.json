@@ -1,0 +1,33 @@
+{
+  "name": "aa_interactions",
+  "primary_key_column": "id",
+  "enable_rls": false,
+  "visibility": "POD",
+  "columns": [
+    {
+      "name": "actor_id",
+      "type": "UUID",
+      "required": true
+    },
+    {
+      "name": "target_id",
+      "type": "UUID",
+      "required": true
+    },
+    {
+      "name": "action_type",
+      "type": "ENUM",
+      "required": true,
+      "options": [
+        "like",
+        "pass"
+      ]
+    },
+    {
+      "name": "active",
+      "type": "BOOLEAN",
+      "default": true
+    }
+  ],
+  "config": {}
+}

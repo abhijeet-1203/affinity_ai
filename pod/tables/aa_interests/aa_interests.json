@@ -1,0 +1,32 @@
+{
+  "name": "aa_interests",
+  "primary_key_column": "id",
+  "enable_rls": false,
+  "visibility": "POD",
+  "columns": [
+    {
+      "name": "normalized_name",
+      "type": "TEXT",
+      "required": true,
+      "unique": true,
+      "max_length": 80
+    },
+    {
+      "name": "label",
+      "type": "TEXT",
+      "required": true,
+      "max_length": 80
+    },
+    {
+      "name": "category",
+      "type": "TEXT",
+      "max_length": 40
+    },
+    {
+      "name": "is_custom",
+      "type": "BOOLEAN",
+      "default": false
+    }
+  ],
+  "config": {}
+}

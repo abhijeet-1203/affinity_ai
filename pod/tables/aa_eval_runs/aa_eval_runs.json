@@ -1,0 +1,27 @@
+{
+  "name": "aa_eval_runs",
+  "primary_key_column": "id",
+  "enable_rls": false,
+  "visibility": "POD",
+  "columns": [
+    {
+      "name": "dataset",
+      "type": "TEXT",
+      "required": true
+    },
+    {
+      "name": "k",
+      "type": "INTEGER",
+      "default": 5
+    },
+    {
+      "name": "metrics",
+      "type": "JSON"
+    },
+    {
+      "name": "notes",
+      "type": "TEXT"
+    }
+  ],
+  "config": {}
+}

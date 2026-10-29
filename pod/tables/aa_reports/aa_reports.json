@@ -1,0 +1,49 @@
+{
+  "name": "aa_reports",
+  "primary_key_column": "id",
+  "enable_rls": false,
+  "visibility": "POD",
+  "columns": [
+    {
+      "name": "reporter_id",
+      "type": "UUID",
+      "required": true
+    },
+    {
+      "name": "reported_id",
+      "type": "UUID",
+      "required": true
+    },
+    {
+      "name": "reason",
+      "type": "ENUM",
+      "required": true,
+      "options": [
+        "harassment",
+        "spam",
+        "fake_profile",
+        "inappropriate_content",
+        "safety_concern",
+        "other"
+      ]
+    },
+    {
+      "name": "details",
+      "type": "TEXT",
+      "max_length": 1000
+    },
+    {
+      "name": "status",
+      "type": "ENUM",
+      "required": true,
+      "default": "open",
+      "options": [
+        "open",
+        "under_review",
+        "resolved",
+        "dismissed"
+      ]
+    }
+  ],
+  "config": {}
+}

@@ -1,0 +1,75 @@
+{
+  "name": "aa_profiles",
+  "primary_key_column": "id",
+  "enable_rls": false,
+  "visibility": "POD",
+  "columns": [
+    {
+      "name": "account_id",
+      "type": "UUID",
+      "required": true,
+      "unique": true
+    },
+    {
+      "name": "display_name",
+      "type": "TEXT",
+      "required": true,
+      "max_length": 60
+    },
+    {
+      "name": "birth_date",
+      "type": "DATE"
+    },
+    {
+      "name": "bio",
+      "type": "TEXT",
+      "max_length": 1200
+    },
+    {
+      "name": "city",
+      "type": "TEXT",
+      "max_length": 80
+    },
+    {
+      "name": "avatar_url",
+      "type": "TEXT"
+    },
+    {
+      "name": "discoverable",
+      "type": "BOOLEAN",
+      "default": true
+    },
+    {
+      "name": "show_age",
+      "type": "BOOLEAN",
+      "default": true
+    },
+    {
+      "name": "show_city",
+      "type": "BOOLEAN",
+      "default": true
+    },
+    {
+      "name": "onboarding_step",
+      "type": "INTEGER",
+      "default": 1
+    },
+    {
+      "name": "onboarding_completed",
+      "type": "BOOLEAN",
+      "default": false
+    },
+    {
+      "name": "connection_type",
+      "type": "ENUM",
+      "default": "dating",
+      "options": [
+        "dating",
+        "friendship",
+        "activity_partner",
+        "any"
+      ]
+    }
+  ],
+  "config": {}
+}

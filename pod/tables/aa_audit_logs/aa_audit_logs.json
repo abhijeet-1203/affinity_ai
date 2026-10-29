@@ -1,0 +1,23 @@
+{
+  "name": "aa_audit_logs",
+  "primary_key_column": "id",
+  "enable_rls": false,
+  "visibility": "POD",
+  "columns": [
+    {
+      "name": "account_id",
+      "type": "UUID"
+    },
+    {
+      "name": "action",
+      "type": "TEXT",
+      "required": true,
+      "max_length": 60
+    },
+    {
+      "name": "metadata",
+      "type": "JSON"
+    }
+  ],
+  "config": {}
+}

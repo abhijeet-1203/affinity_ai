@@ -1,0 +1,34 @@
+{
+  "name": "aa_matches",
+  "primary_key_column": "id",
+  "enable_rls": false,
+  "visibility": "POD",
+  "columns": [
+    {
+      "name": "user_a_id",
+      "type": "UUID",
+      "required": true
+    },
+    {
+      "name": "user_b_id",
+      "type": "UUID",
+      "required": true
+    },
+    {
+      "name": "status",
+      "type": "ENUM",
+      "required": true,
+      "default": "active",
+      "options": [
+        "active",
+        "withdrawn",
+        "blocked"
+      ]
+    },
+    {
+      "name": "withdrawn_by",
+      "type": "UUID"
+    }
+  ],
+  "config": {}
+}

@@ -1,0 +1,24 @@
+{
+  "name": "aa_questionnaire_responses",
+  "primary_key_column": "id",
+  "enable_rls": false,
+  "visibility": "POD",
+  "columns": [
+    {
+      "name": "account_id",
+      "type": "UUID",
+      "required": true
+    },
+    {
+      "name": "question_key",
+      "type": "TEXT",
+      "required": true,
+      "max_length": 60
+    },
+    {
+      "name": "response_value",
+      "type": "JSON"
+    }
+  ],
+  "config": {}
+}

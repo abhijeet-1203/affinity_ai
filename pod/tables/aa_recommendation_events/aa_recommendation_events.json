@@ -1,0 +1,40 @@
+{
+  "name": "aa_recommendation_events",
+  "primary_key_column": "id",
+  "enable_rls": false,
+  "visibility": "POD",
+  "columns": [
+    {
+      "name": "account_id",
+      "type": "UUID",
+      "required": true
+    },
+    {
+      "name": "target_account_id",
+      "type": "UUID",
+      "required": true
+    },
+    {
+      "name": "score",
+      "type": "FLOAT"
+    },
+    {
+      "name": "coverage",
+      "type": "FLOAT"
+    },
+    {
+      "name": "rank",
+      "type": "INTEGER"
+    },
+    {
+      "name": "session_id",
+      "type": "TEXT",
+      "max_length": 80
+    },
+    {
+      "name": "dimensions",
+      "type": "JSON"
+    }
+  ],
+  "config": {}
+}

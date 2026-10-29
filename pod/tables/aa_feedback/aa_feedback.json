@@ -1,0 +1,34 @@
+{
+  "name": "aa_feedback",
+  "primary_key_column": "id",
+  "enable_rls": false,
+  "visibility": "POD",
+  "columns": [
+    {
+      "name": "account_id",
+      "type": "UUID",
+      "required": true
+    },
+    {
+      "name": "target_account_id",
+      "type": "UUID",
+      "required": true
+    },
+    {
+      "name": "feedback_type",
+      "type": "ENUM",
+      "required": true,
+      "options": [
+        "matches_interests",
+        "not_relevant",
+        "more_like_this",
+        "does_not_align"
+      ]
+    },
+    {
+      "name": "note",
+      "type": "TEXT"
+    }
+  ],
+  "config": {}
+}

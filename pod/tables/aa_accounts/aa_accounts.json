@@ -1,0 +1,64 @@
+{
+  "name": "aa_accounts",
+  "primary_key_column": "id",
+  "enable_rls": false,
+  "visibility": "POD",
+  "columns": [
+    {
+      "name": "email",
+      "type": "TEXT",
+      "required": true,
+      "unique": true,
+      "max_length": 320
+    },
+    {
+      "name": "password_hash",
+      "type": "TEXT",
+      "required": true
+    },
+    {
+      "name": "password_salt",
+      "type": "TEXT",
+      "required": true
+    },
+    {
+      "name": "password_algo",
+      "type": "TEXT",
+      "default": "scrypt"
+    },
+    {
+      "name": "account_status",
+      "type": "ENUM",
+      "required": true,
+      "default": "active",
+      "options": [
+        "active",
+        "suspended",
+        "deleted"
+      ]
+    },
+    {
+      "name": "is_demo",
+      "type": "BOOLEAN",
+      "default": false
+    },
+    {
+      "name": "last_login_at",
+      "type": "DATETIME"
+    },
+    {
+      "name": "failed_login_count",
+      "type": "INTEGER",
+      "default": 0
+    },
+    {
+      "name": "locked_until",
+      "type": "DATETIME"
+    },
+    {
+      "name": "pod_member_email",
+      "type": "TEXT"
+    }
+  ],
+  "config": {}
+}

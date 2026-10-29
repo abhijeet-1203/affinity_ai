@@ -1,0 +1,61 @@
+{
+  "name": "aa_discovery_preferences",
+  "primary_key_column": "id",
+  "enable_rls": false,
+  "visibility": "POD",
+  "columns": [
+    {
+      "name": "account_id",
+      "type": "UUID",
+      "required": true,
+      "unique": true
+    },
+    {
+      "name": "connection_type",
+      "type": "ENUM",
+      "default": "dating",
+      "options": [
+        "dating",
+        "friendship",
+        "activity_partner",
+        "any"
+      ]
+    },
+    {
+      "name": "min_age",
+      "type": "INTEGER",
+      "default": 18
+    },
+    {
+      "name": "max_age",
+      "type": "INTEGER",
+      "default": 99
+    },
+    {
+      "name": "w_shared",
+      "type": "FLOAT",
+      "default": 0.35
+    },
+    {
+      "name": "w_semantic",
+      "type": "FLOAT",
+      "default": 0.25
+    },
+    {
+      "name": "w_communication",
+      "type": "FLOAT",
+      "default": 0.2
+    },
+    {
+      "name": "w_lifestyle",
+      "type": "FLOAT",
+      "default": 0.2
+    },
+    {
+      "name": "include_demo",
+      "type": "BOOLEAN",
+      "default": true
+    }
+  ],
+  "config": {}
+}

@@ -1,0 +1,28 @@
+{
+  "name": "aa_profile_interests",
+  "primary_key_column": "id",
+  "enable_rls": false,
+  "visibility": "POD",
+  "columns": [
+    {
+      "name": "profile_id",
+      "type": "UUID",
+      "required": true
+    },
+    {
+      "name": "interest_id",
+      "type": "UUID",
+      "required": true
+    },
+    {
+      "name": "source",
+      "type": "ENUM",
+      "default": "catalog",
+      "options": [
+        "catalog",
+        "custom"
+      ]
+    }
+  ],
+  "config": {}
+}

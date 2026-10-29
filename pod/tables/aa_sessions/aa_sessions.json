@@ -1,0 +1,43 @@
+{
+  "name": "aa_sessions",
+  "primary_key_column": "id",
+  "enable_rls": false,
+  "visibility": "POD",
+  "columns": [
+    {
+      "name": "token_hash",
+      "type": "TEXT",
+      "required": true,
+      "unique": true
+    },
+    {
+      "name": "account_id",
+      "type": "UUID",
+      "required": true
+    },
+    {
+      "name": "issued_at",
+      "type": "DATETIME",
+      "required": true
+    },
+    {
+      "name": "expires_at",
+      "type": "DATETIME",
+      "required": true
+    },
+    {
+      "name": "last_used_at",
+      "type": "DATETIME"
+    },
+    {
+      "name": "revoked",
+      "type": "BOOLEAN",
+      "default": false
+    },
+    {
+      "name": "revoked_reason",
+      "type": "TEXT"
+    }
+  ],
+  "config": {}
+}
